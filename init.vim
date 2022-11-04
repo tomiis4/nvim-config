@@ -14,28 +14,29 @@
 
 call plug#begin()
 
- Plug 'https://github.com/vim-airline/vim-airline' " Cool bottom line :D
- Plug 'https://github.com/preservim/nerdtree' " Nerdtree
- Plug 'https://github.com/ap/vim-css-color' " Show color of hex/rgb etc. value
- Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Multiple color schemes
- Plug 'https://github.com/jiangmiao/auto-pairs' " Pair ()
- Plug 'https://github.com/nathanaelkane/vim-indent-guides' " Show indent
- Plug 'https://github.com/ryanoasis/vim-devicons' " Icons for nerdtree
- Plug 'https://github.com/tc50cal/vim-terminal' " Terminal in vim
- Plug 'https://github.com/ollykel/v-vim' " Syntax highlight for VLang
- Plug 'https://github.com/tpope/vim-commentary' " GCC => comment whole line
+ Plug 'mattn/emmet-vim' " html emmets
+ Plug 'vim-airline/vim-airline' " cool bottom line
+ Plug 'preservim/nerdtree' " nerdtree
+ Plug 'ap/vim-css-color' " css show color
+ Plug 'rafi/awesome-vim-colorschemes' " color schemes
+ Plug 'jiangmiao/auto-pairs' " autopair brackets
+ Plug 'nathanaelkane/vim-indent-guides' " indenting showing
+ Plug 'ryanoasis/vim-devicons' " icons for nerdtree
+ Plug 'tc50cal/vim-terminal' " terminal in vim
+ Plug 'ollykel/v-vim' " syntax for VLang
+ Plug 'tpope/vim-commentary' " gcc for comments
 
 call plug#end()
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="-"
 
-" C+n always on start :D
 nnoremap <C-n> :NERDTreeToggle <bar> :IndentGuidesEnable <CR>
 nnoremap <C-f> :NERDTreeFocus<CR>
 
-" My fav color theme
 "4) deepspace
 "3) Apprentice
 "2) pink-moon
-:colorscheme rakr
+"1) ayu
+"0) gotham256
+:colorscheme onedark
