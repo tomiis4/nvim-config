@@ -2,7 +2,7 @@
 :set relativenumber
 :set mouse=a
 
-
+:set encoding=UTF-8
 :set termguicolors
 
 :set autoindent
@@ -14,17 +14,18 @@
 
 call plug#begin()
 
- Plug 'mattn/emmet-vim' " html emmets
- Plug 'vim-airline/vim-airline' " cool bottom line
+ Plug 'mattn/emmet-vim' " html snippets
+ Plug 'vim-airline/vim-airline' " bottom line
  Plug 'preservim/nerdtree' " nerdtree
  Plug 'ap/vim-css-color' " css show color
  Plug 'rafi/awesome-vim-colorschemes' " color schemes
  Plug 'jiangmiao/auto-pairs' " autopair brackets
  Plug 'nathanaelkane/vim-indent-guides' " indenting showing
- Plug 'ryanoasis/vim-devicons' " icons for nerdtree
  Plug 'tc50cal/vim-terminal' " terminal in vim
  Plug 'ollykel/v-vim' " syntax for VLang
  Plug 'tpope/vim-commentary' " gcc for comments
+
+ Plug 'ryanoasis/vim-devicons' " icons for nerdtree
 
 call plug#end()
 
@@ -39,4 +40,4 @@ nnoremap <C-f> :NERDTreeFocus<CR>
 "2) pink-moon
 "1) ayu
 "0) gotham256
-:colorscheme onedark
+:colorscheme onehalfdark " / onedark
