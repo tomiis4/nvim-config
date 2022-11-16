@@ -15,7 +15,10 @@
 call plug#begin()
 
  Plug 'mattn/emmet-vim' " html snippets
+
  Plug 'vim-airline/vim-airline' " bottom line
+ Plug 'vim-airline/vim-airline-themes' "theme
+
  Plug 'preservim/nerdtree' " nerdtree
  Plug 'ap/vim-css-color' " css show color
  Plug 'rafi/awesome-vim-colorschemes' " color schemes
@@ -27,12 +30,17 @@ call plug#begin()
 
  Plug 'ryanoasis/vim-devicons' " icons for nerdtree
 
+ Plug 'ghifarit53/tokyonight-vim'
+
 call plug#end()
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="-"
 
-nnoremap <C-n> :NERDTreeToggle <bar> :IndentGuidesEnable <CR>
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
+nnoremap <C-n> :NERDTreeToggle <bar> :IndentGuidesEnable <bar> :AirlineTheme wombat <CR>
 nnoremap <C-f> :NERDTreeFocus<CR>
 
 "4) deepspace
@@ -40,4 +48,7 @@ nnoremap <C-f> :NERDTreeFocus<CR>
 "2) pink-moon
 "1) ayu
 "0) gotham256
-:colorscheme onehalfdark " / onedark
+"-1) onehalfdark " / onedark
+" :colorscheme challenger_deep
+:colorscheme tokyonight
+
