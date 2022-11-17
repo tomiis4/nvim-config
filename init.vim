@@ -14,23 +14,27 @@
 
 call plug#begin()
 
- Plug 'mattn/emmet-vim' " html snippets
+	Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc
 
- Plug 'vim-airline/vim-airline' " bottom line
- Plug 'vim-airline/vim-airline-themes' "theme
 
- Plug 'preservim/nerdtree' " nerdtree
- Plug 'ap/vim-css-color' " css show color
- Plug 'rafi/awesome-vim-colorschemes' " color schemes
- Plug 'jiangmiao/auto-pairs' " autopair brackets
- Plug 'nathanaelkane/vim-indent-guides' " indenting showing
- Plug 'tc50cal/vim-terminal' " terminal in vim
- Plug 'ollykel/v-vim' " syntax for VLang
- Plug 'tpope/vim-commentary' " gcc for comments
+	Plug 'mattn/emmet-vim' " html snippets
 
- Plug 'ryanoasis/vim-devicons' " icons for nerdtree
+	Plug 'https://github.com/Rigellute/shades-of-purple.vim' "airline good theme
+	Plug 'vim-airline/vim-airline' " bottom line
+	Plug 'vim-airline/vim-airline-themes' "theme
 
- Plug 'ghifarit53/tokyonight-vim'
+	Plug 'preservim/nerdtree' " nerdtree
+	Plug 'ap/vim-css-color' " css show color
+	Plug 'rafi/awesome-vim-colorschemes' " color schemes
+	Plug 'jiangmiao/auto-pairs' " autopair brackets
+	Plug 'nathanaelkane/vim-indent-guides' " indenting showing
+	Plug 'tc50cal/vim-terminal' " terminal in vim
+	Plug 'ollykel/v-vim' " syntax for VLang
+	Plug 'tpope/vim-commentary' " gcc for comments
+
+	Plug 'ryanoasis/vim-devicons' " icons for nerdtree
+
+	Plug 'ghifarit53/tokyonight-vim' "theme
 
 call plug#end()
 
@@ -40,8 +44,10 @@ let g:NERDTreeDirArrowCollapsible="-"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-nnoremap <C-n> :NERDTreeToggle <bar> :IndentGuidesEnable <bar> :AirlineTheme wombat <CR>
+" <bar> :AirlineTheme shades_of_purple
+nnoremap <C-n> :NERDTreeToggle <bar> :IndentGuidesEnable  <bar> :CocEnable <CR>
 nnoremap <C-f> :NERDTreeFocus<CR>
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 "4) deepspace
 "3) Apprentice
