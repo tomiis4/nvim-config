@@ -32,14 +32,15 @@ call plug#begin()
 	Plug 'ollykel/v-vim' " syntax for VLang
 	Plug 'tpope/vim-commentary' " gcc for comments
 
-	Plug 'ryanoasis/vim-devicons' " icons for nerdtree
+	Plug 'wakatime/vim-wakatime'
+
 
 	Plug 'ghifarit53/tokyonight-vim' "theme
+	
+	Plug 'ryanoasis/vim-devicons' " icons for nerdtree
 
 call plug#end()
 
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="-"
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -55,6 +56,6 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 "1) ayu
 "0) gotham256
 "-1) onehalfdark " / onedark
-" :colorscheme challenger_deep
+" :colorscheme challenger_deepd
 :colorscheme tokyonight
 
