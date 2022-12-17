@@ -13,13 +13,8 @@
 
 
 call plug#begin()
-
 	Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc
-
-
-	Plug 'mattn/emmet-vim' " html snippets
-
-	Plug 'https://github.com/Rigellute/shades-of-purple.vim' "airline good theme
+	
 	Plug 'vim-airline/vim-airline' " bottom line
 	Plug 'vim-airline/vim-airline-themes' "theme
 
@@ -28,13 +23,13 @@ call plug#begin()
 	Plug 'rafi/awesome-vim-colorschemes' " color schemes
 	Plug 'jiangmiao/auto-pairs' " autopair brackets
 	Plug 'nathanaelkane/vim-indent-guides' " indenting showing
-	Plug 'tc50cal/vim-terminal' " terminal in vim
-	Plug 'ollykel/v-vim' " syntax for VLang
+	Plug 'https://github.com/sheerun/vim-polyglot' " syntax for multiple languages
+	
 	Plug 'tpope/vim-commentary' " gcc for comments
-
+	
 	Plug 'wakatime/vim-wakatime'
-
-
+	
+	
 	Plug 'ghifarit53/tokyonight-vim' "theme
 	
 	Plug 'ryanoasis/vim-devicons' " icons for nerdtree
@@ -58,4 +53,3 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 "-1) onehalfdark " / onedark
 " :colorscheme challenger_deepd
 :colorscheme tokyonight
-
