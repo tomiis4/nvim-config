@@ -11,45 +11,42 @@
 :set softtabstop=3
 :set shiftwidth=3
 
-
 call plug#begin()
-	Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc
-	
-	Plug 'vim-airline/vim-airline' " bottom line
-	Plug 'vim-airline/vim-airline-themes' "theme
 
-	Plug 'preservim/nerdtree' " nerdtree
-	Plug 'ap/vim-css-color' " css show color
-	Plug 'rafi/awesome-vim-colorschemes' " color schemes
-	Plug 'jiangmiao/auto-pairs' " autopair brackets
-	Plug 'nathanaelkane/vim-indent-guides' " indenting showing
-	Plug 'https://github.com/sheerun/vim-polyglot' " syntax for multiple languages
-	
-	Plug 'tpope/vim-commentary' " gcc for comments
-	
+	Plug 'ghifarit53/tokyonight-vim'
 	Plug 'wakatime/vim-wakatime'
+	Plug 'tpope/vim-commentary'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'} " :CocInstall coc-sh coc-clangd coc-css coc-go coc-html coc-tsserver coc-json
+	Plug 'kien/ctrlp.vim' " file finder
+	Plug 'sheerun/vim-polyglot'
+	Plug 'nathanaelkane/vim-indent-guides'
+	Plug 'jiangmiao/auto-pairs'
+
+	Plug 'preservim/nerdtree'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'ryanoasis/vim-devicons'
 	
-	
-	Plug 'ghifarit53/tokyonight-vim' "theme
-	
-	Plug 'ryanoasis/vim-devicons' " icons for nerdtree
+	Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
-
+" airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-
-" <bar> :AirlineTheme shades_of_purple
-nnoremap <C-n> :NERDTreeToggle <bar> :IndentGuidesEnable  <bar> :CocEnable <CR>
-nnoremap <C-f> :NERDTreeFocus<CR>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
-"4) deepspace
-"3) Apprentice
-"2) pink-moon
-"1) ayu
-"0) gotham256
-"-1) onehalfdark " / onedark
-" :colorscheme challenger_deepd
-:colorscheme tokyonight
+" nerdtree
+autocmd VimEnter * NERDTree
+nnoremap <C-f> :NERDTreeFocus<CR>
+
+" pairs
+autocmd VimEnter * IndentGuidesEnable  
+
+" file finder"
+nnoremap <C-g> :CtrlP<CR>
+
+" coc
+autocmd VimEnter * CocEnable  
+
+colorscheme tokyonight
