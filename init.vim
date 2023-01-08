@@ -12,8 +12,8 @@
 :set shiftwidth=3
 
 call plug#begin()
-
 	Plug 'ghifarit53/tokyonight-vim'
+
 	Plug 'wakatime/vim-wakatime'
 	Plug 'tpope/vim-commentary'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'} " :CocInstall coc-sh coc-clangd coc-css coc-go coc-html coc-tsserver coc-json
@@ -44,9 +44,11 @@ nnoremap <C-f> :NERDTreeFocus<CR>
 autocmd VimEnter * IndentGuidesEnable  
 
 " file finder"
+set wildignore+=*\\tmp\\*,*\\node_modules\\*,*.swp,*.zip,*.exe 
 nnoremap <C-g> :CtrlP<CR>
 
 " coc
 autocmd VimEnter * CocEnable  
+
 
 colorscheme tokyonight
